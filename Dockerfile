@@ -1,5 +1,7 @@
 FROM rocker/r-ver:4.1.0
 
+RUN apt-get update && apt-get install -y libcurl4-openssl-dev libssl-dev
+
 ENV RENV_VERSION 0.15.2
 
 RUN Rscript -e "install.packages('remotes', repos = c(CRAN = 'https://cloud.r-project.org'))"
