@@ -6,6 +6,7 @@ RUN Rscript -e "install.packages('remotes', repos = c(CRAN = 'https://cloud.r-pr
 RUN Rscript -e "remotes::install_github('rstudio/renv@${RENV_VERSION}')"
 
 WORKDIR /computational-reproducibility-in-r
+COPY renv.lock renv.lock
 RUN Rscript -e 'renv::restore()'
 
 # Default to bash terminal when running docker image
