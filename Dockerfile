@@ -1,6 +1,6 @@
 FROM rocker/r-ver:4.1.0
 
-RUN apt-get update && apt-get install -y libcurl4-openssl-dev libssl-dev
+RUN apt-get update && apt-get install -y libcurl4-openssl-dev libssl-dev libz-dev
 
 ENV RENV_VERSION 0.15.2
 
